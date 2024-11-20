@@ -136,3 +136,21 @@ const evenDouble = numbers
 console.log(evenDouble);
 
 //Array.reduce()
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+//Long form
+const sum = numbers.reduce(function (accumulator, currentValue) {
+  return accumulator + currentValue;
+}, 0); //starts at 0, then takes the previous and current, and adds them
+
+//Short form
+const sum2 = numbers.reduce((acc, curr) => acc + curr, 10);
+console.log(sum2);
+
+//For loop
+const sum3 = () => {
+  const acc = 0;
+  for (const curr of numbers) {
+    acc += curr;
+  }
+};
