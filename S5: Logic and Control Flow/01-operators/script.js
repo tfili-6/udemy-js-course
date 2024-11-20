@@ -63,3 +63,76 @@ if (hour === 6 || hour === 20) {
 }
 
 // However, if you begin to nest a lot, use a switch
+const dte = new Date(2022, 1, 10, 8, 0, 0);
+const month = dte.getMonth();
+
+console.log(month);
+
+switch (month) {
+  case 1:
+    console.log('It is january');
+    break;
+  case 2:
+    console.log('It is february');
+    break;
+  case 3:
+    console.log('It is march');
+    break;
+  default:
+    console.log(`It is not jan, feb, or march.`);
+}
+
+switch (true) {
+  case hour < 12:
+    console.log('Good Morning');
+    break;
+  case hour < 18:
+    console.log('Good afternoon');
+  default:
+    console.log('Goodnight');
+}
+
+function calculator(num1, num2, operator) {
+  if (operator === '-') {
+    console.log(num1 - num2);
+  } else if (opertor === '+') {
+    console.log(num1 + num2);
+  } else if (operator === '*') {
+    console.log(num1 * num2);
+  } else if (operator === '/') {
+    console.log(num1 / num2);
+  } else {
+    console.log('Invald input operator');
+  }
+}
+
+calculator(5, 10, '+');
+
+//Chain map method
+const squareRootAndDouble = numbers
+  .map((number) => Math.sqrt(number))
+  .map((number) => number * 2);
+console.log(squareRootAndDouble);
+
+//OR
+const squareRootAndDouble2 = numbers
+  .map(function (numbers) {
+    return Math.sqrt(number);
+  })
+  .map(function (sqrt) {
+    return sqrt * 2;
+  })
+  .map(function (sqrtDoubled) {
+    return sqrt * 3;
+  });
+
+console.log(squareRootAndDouble2);
+
+// Chaining different methods
+const evenDouble = numbers
+  .filter((number) => number % 2 === 0)
+  .map((number) => number * 2);
+
+console.log(evenDouble);
+
+//Array.reduce()
